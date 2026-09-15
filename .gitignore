@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project outputs — keep directories but ignore contents
+captures/*.pcapng
+captures/*.pcap
+reports/*.json
+logs/*.log
+
+# OS
+.DS_Store
+Thumbs.db

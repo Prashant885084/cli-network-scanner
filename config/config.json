@@ -1,0 +1,28 @@
+{
+    "target": "127.0.0.1",
+    "lab_ports": {
+        "http_port": 8080,
+        "tcp_port": 9090
+    },
+    "scan_arguments": "-sT -sV",
+    "capture_duration": 15,
+    "capture_interface": "lo",
+    "detection_rules": {
+        "expected_ports": [8080, 9090],
+        "review_ports": [23, 445, 3389, 5900, 6667],
+        "severity": {
+            "23": "high",
+            "445": "medium",
+            "3389": "medium",
+            "5900": "medium",
+            "6667": "high"
+        },
+        "descriptions": {
+            "23": "Telnet - insecure unencrypted protocol",
+            "445": "SMB - file sharing, potential lateral movement vector",
+            "3389": "RDP - remote desktop, verify authorization",
+            "5900": "VNC - remote desktop, verify authorization",
+            "6667": "IRC - sometimes used by botnets for C2"
+        }
+    }
+}
